@@ -1,0 +1,48 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    margin:20%;
+}
+label{
+    position:relative;
+    width: 100px;
+    height:40px;
+   
+    display:inline-block;
+
+}
+span{
+    position:absolute;
+    width:100px;
+    height:40px;
+    background-color:grey;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    /* opacity:0.2; */
+    border-radius:20px;
+}
+span::before{
+    content:"";
+    
+    position:absolute;
+    width:20px;
+    height:20px;
+    background-color:white;
+    top:9px;
+    left:7px;
+    border-radius:50%;
+}
+input{
+    visibility: hidden;
+}
+input:checked+span::before{
+    transform:translateX(60px);
+}
+
+input:checked+span{
+background:linear-gradient(to right, rgb(202, 82, 138),skyblue);
+}
